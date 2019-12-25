@@ -3,10 +3,10 @@
 # Contributor: Mateusz Mikuła <mati865@gmail.com
 
 _realname=rust
-_bootstrapping=no
+_bootstrapping=yes
 pkgbase=mingw-w64-${_realname}
 pkgname="${MINGW_PACKAGE_PREFIX}-${_realname}"
-pkgver=1.37.0
+pkgver=1.40.0
 pkgrel=1
 pkgdesc="Systems programming language focused on safety, speed and concurrency (mingw-w64)"
 arch=('any')
@@ -36,15 +36,15 @@ source=("https://static.rust-lang.org/dist/${_realname}c-${pkgver}-src.tar.gz"{,
         "0003-link-with-system-curl.patch"
         "0004-unbundle-gcc.patch"
         "0005-win32-config.patch")
-sha256sums=('120e7020d065499cc6b28759ff04153bfdc2ac9b5adeb252331a4eb87cbe38c3'
+sha256sums=('dd97005578defc10a482bff3e4e728350d2099c60ffcf1f5e189540c39a549ad'
             'SKIP'
             '500f9bd7452c8d35115ad823d8fcb9bda8b86878c2a0f57f9e6a72fc4ba9a8f5'
             '4b6953fc6ab12d2ac45f65c429bf6be69d80bbf65727f293e2ced69ac9acc666'
             'e54e1da8428c484f41005bf4f9f7a8643253306e115b23e4dc17b24a6647ecab'
             'b16f65dfdc79e7a722b3e2589e90a1431a971038dd5dfa1394ec0427e3c0a2b4'
-            'b51bed9c6c6c558272f2de9fdf50d002211e92859df0598721d61b50188ea8d0'
+            '30e95910ff739793a503f730d5078be46c3fbd651d39db1b5b1d37a6bb82936f'
             '061f1cf5374c926bc130a4afbde005dcd09fdbaee079469ad045fd23a7a88a2c')
-validpgpkeys=('108F66205EAEB0AAA8DD5E1C85AB96E6FA1BE5FE') # Rust Language (Tag and Release Signing Key) <rust-key@rust-lang.org>
+validpgpkeys=('C13466B7E169A085188632165CB4A9347B3B09DC') # Rust Language (Tag and Release Signing Key) <rust-key@rust-lang.org>
 noextract=(${_realname}c-${pkgver}-src.tar.gz)
 
 prepare() {
